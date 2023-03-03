@@ -5,3 +5,5 @@ build
 .history
 docs
 .backup
+
+.dendron.cache.*

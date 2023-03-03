@@ -18,11 +18,11 @@ commands:
     insertNoteIndex:
         enableMarker: false
     randomNote: {}
-    copyNoteLink: {}
+    copyNoteLink:
+        aliasMode: title
+    templateHierarchy: template
 workspace:
-    vaults:
-        -
-            fsPath: vault
+    vaults: []
     journal:
         dailyDomain: daily
         name: journal
@@ -34,6 +34,7 @@ workspace:
         addBehavior: asOwnDomain
     graph:
         zoomSpeed: 1
+        createStub: false
     enableAutoCreateOnDefinition: false
     enableXVaultWikiLink: false
     enableRemoteVaultInit: true
@@ -83,24 +84,13 @@ preview:
 publishing:
     enableFMTitle: true
     enableNoteTitleForLink: true
-    enableMermaid: true
     enablePrettyRefs: true
     enableKatex: true
-    assetsPrefix: /template.publish.github-action
     copyAssets: true
     siteHierarchies:
         - root
-    enableSiteLastModified: true
-    siteRootDir: docs
-    siteUrl: https://dendronhq.github.io
-    enableFrontmatterTags: true
-    enableHashesForFMTags: false
-    enableRandomlyColoredTags: true
-    duplicateNoteBehavior:
-        action: useVault
-        payload:
-            - vault
     writeStubs: false
+    siteRootDir: docs
     seo:
         title: Dendron
         description: Personal knowledge space
@@ -109,7 +99,18 @@ publishing:
         editLinkText: Edit this page on GitHub
         editBranch: main
         editViewMode: tree
-    enablePrettyLinks: true
-    theme: dark
+    enableSiteLastModified: true
+    enableFrontmatterTags: true
+    enableHashesForFMTags: false
+    enableRandomlyColoredTags: true
     enableTaskNotes: true
+    enablePrettyLinks: true
+    searchMode: lookup
+    enableMermaid: true
+    assetsPrefix: /PersonalWiki
+    siteUrl: https://mdm508.github.io
+    duplicateNoteBehavior:
+        action: useVault
+        payload: []
+    theme: dark
     templateVersion: 0.97.0
